@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var gender = prompt("'남성'또는'여성'을 입력하세요!","");
+        var age = prompt("나이를 입력하세요!","");
+        var comment = "";
+
+        if(gender =="남성"){
+            if(age<20){
+                comment = "man1 제품을 추천합니다!"
+            }else if(age >= 20){
+                comment = "man2 제품을 추천 합니다!"
+            }else{
+                comment = "나이 입력을 실수하셨네영;"
+            }
+        }else if(gender == "여성"){
+            if(age<20){
+                comment = "female1 제품을 추천합니다!"
+            }else if(age >= 20){
+                comment = "female2 제품을 추천 합니다!"
+            }else{
+                comment = "나이 입력을 실수하셨네영;"
+            }
+        }else{
+            comment = "생물학적 성별만 쓰세요. 제발;;"
+        }
+        document.write(comment);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

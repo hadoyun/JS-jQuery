@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function factorial(n){
+            if(n == 0){
+                document.write("call end");
+            }else{
+                document.write("call " + n + "<br>");
+                arguments.callee(n-1);
+                //현재 실행 중인 이 함수(factorial())!
+            }
+        }
+        factorial(10);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

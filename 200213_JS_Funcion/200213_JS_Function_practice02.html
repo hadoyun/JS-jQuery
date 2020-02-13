@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function calculation(m){
+        //     m = m*0.3025;
+        //     return m;
+        // }
+        // function areaChange(my){
+        //     var result = calculation(my).toFixed(1);
+        //     document.write(result + "평");
+        // }
+        // areaChange(102);
+
+        function areaChange(my){
+            var calculation = function(m){
+                m = m * 0.3025;
+                return m;
+            }
+            var result = calculation(my);
+            document.write(result + "평");
+        }
+        areaChange(112);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

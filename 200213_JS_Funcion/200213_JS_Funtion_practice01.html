@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //선언적 함수 선언하기
+        show1();
+        function show1(){
+            document.write("show1() 함수를 호출했습니다." + "<br>")
+        }
+        //변수에 함수 저장하기
+        function show2(){
+            document.write("show2() 함수를 호출했습니다." + "<br>");
+        }
+        var view = show2;
+        view();
+        //view 변수에 저장 되어있는 함수 데이터 직접 보기
+        function show3(){
+            document.write("show3() 함수를 호출했습니다.");
+        }
+        var view = show3;
+        document.write(view);
+        //'익명함수' 사용해보기
+        var view = function (){
+            document.write("<br>" + "익명 함수를 호출했습니다.")
+        }
+        view();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

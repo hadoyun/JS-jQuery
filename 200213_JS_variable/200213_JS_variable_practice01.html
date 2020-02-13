@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //string
+        document.write("<strong>string date</strong>" + "<br>");
+        var str1 = "Javascript";
+        var str2 = "'Javascript'";
+        document.write(str1 + "<br>");
+        document.write(str2 + "<br>");
+
+        //number
+        document.write("<strong>number date</strong>" + "<br>");
+        var num1 = 10;
+        var num2 = 10.5;
+        document.write(num1 + "<br>");
+        document.write(num2 + "<br>");
+
+        //boolean　
+        document.write("<strong>boolean date</strong>" + "<br>");
+        var temp1 = true;
+        var temp2 = false;
+        document.write(temp1 + "<br>");
+        document.write(temp2 + "<br>");
+        var temp3 = 0;
+        var temp4 = 1;
+        document.write(Boolean(temp3) + "<br>");
+        document.write(Boolean(temp4) + "<br>");
+
+        //Array
+        document.write("<strong>Array date</strong>" + "<br>");
+        var ary = ["html" , "javascript", "jQuery"];
+        for( var i = 0; i < 3; ++i)
+        {
+            document.write(ary[i] + "<br>");
+        }
+
+        //Object
+        document.write("<strong>Object date</strong>" + "<br>");
+        var exam = {subject:"css",score:20};
+        document.write(exam.subject + "<br>");
+        document.write(exam.score + "<br>");
+
+        //function
+        document.write("<strong>function date</strong>" + "<br>");
+        var unitChange = function(num){
+            var trans = num/100;
+            document.write(num + "cm " + trans + "m입니다." + "<br>")
+        };
+        unitChange(100);
+
+        //undefined, null
+        document.write("<strong>undefined, null date</strong>" + "<br>");
+        var obj1;
+        document.write(obj1 +"<br>");
+        var obj2 = 10;
+        obj2 = null;
+        document.write(obj2 + "<br>");
+        document.write(Boolean(obj1) + "<br>");
+        document.write(Boolean(obj2) + "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

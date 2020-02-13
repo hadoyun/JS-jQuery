@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익명(람다) 함수</title>
+    <script>
+        //익명 함수 호출 하기
+        var view = function(){
+            document.write("view() 함수를 호출합니다.(익명 함수)");
+        }
+        view();
+
+        //람다 함수 호출 하기 
+        (function(){
+            document.write("<br>"+ "view() 함수를 호출합니다.(람다 함수)");
+        })();
+
+        var num = prompt("아조띠 키(cm)를 입력해주세욧","");
+        
+        function unit(){
+            var result = num/100;
+            return result;
+        }
+        document.write("아조띠는 " + unit() + "m 입니다.");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

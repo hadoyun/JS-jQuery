@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = "icoxpublish10*-/+@_.자바스크립트";
+        var encodeStr = escape(str);
+        var uri1 = "http://icoxpublish.com/search?자바크립트(),-*~+/.?:@&=$#";
+        var encodeUri1 = "http//icoxpublish10.com/search?자바스크립트()-_*~";
+        var uri2 = "http://icoxpublish.com/search?자바스크립트()-_*~";
+        var encodeUri2 = encodeURI(uri2);
+
+        document.write(encodeStr + "<br>");
+        document.write(unescape(encodeStr) + "<br>");
+        document.write(encodeUri1 + "<br>");
+        document.write(decodeURI(encodeUri1)+"<br>");
+        document.write(encodeUri2 + "<br>");
+        document.write(decodeURIComponent(encodeUri2));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
