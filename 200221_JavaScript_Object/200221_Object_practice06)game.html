@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paper! rock! scissors!</title>
+</head>
+<script>
+    function paperRockScissorsGame(userName,gbb){
+        var com_ramdom = ["paper","rock","scissors"];
+        
+        var game_result = ["win!","lose!","draw!"];
+
+        var computer = Math.floor(Math.random()*3);
+
+        if((gbb == "scissors" && computer == 2) || (gbb=="rock" && computer == 0)||
+        (gbb=="paper" && computer==1)){
+            win(0);
+        }else if ((gbb == "scissors" && computer == 1)||( gbb =="rock" && computer == 2)||
+        (gbb == "paper" && computer == 0)){
+            win(1);
+        }else{
+            win(2);
+        }
+
+        function win(n){
+            var result = userName + ":" + gbb + ", computer:" + com_ramdom[computer];
+            result += "<br>결과:" + userName + "이(가)" + game_result[n];
+            document.write(result);
+        }
+
+    }
+
+    paperRockScissorsGame(prompt("이름 입력",""),prompt("paper, rock, scissors 중 하나를 입력하세요",""));
+</script>
+<body>
+    
+</body>
+</html>

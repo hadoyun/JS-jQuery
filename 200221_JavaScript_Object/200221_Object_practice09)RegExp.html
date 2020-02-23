@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function createRegExp(){
+            var rexp = new RegExp("Javascript","igm");
+            // == var rept = /Javascript/igm;
+        }
+
+        var br = function(){
+            document.write("<br>");
+        }
+
+        function printRegExp1(){
+            var rexp1 = /Javascript/;
+            var str1 = "Javascript jQuery";
+            document.write(rexp1.test(str1));
+            br();
+            document.write(rexp1.test("jQuery"));
+            br();
+            document.write(rexp1.exec(str1));
+            br();
+            document.write(str1.match(rexp1));
+            br();
+            document.write(str1.search(rexp1));
+            br(); 
+        }
+
+        function printRegExp2(){
+            var rexp2 = /Javascript/;
+            var rexp3 = /Javascript/i;
+            var str2 = "javascript";
+            document.write(rexp2.test(str2));
+            br();
+            document.write(rexp3.test(str2));
+            br();
+
+            var rexp4 = /a/;
+            var rexp5 = /a/g;
+            var str3 = "javascript";
+            document.write(str3.match(rexp4));
+            br();
+            document.write(str3.match(rexp5));
+            br();
+
+            var rexp6 = /^s/;
+            var rexp7 = /^s/m;
+            var str4 = "javascript\nscript";
+            document.write(str4.match(rexp6));
+            br();
+            document.write(str4.match(rexp7));
+        }
+        printRegExp1();
+        printRegExp2();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

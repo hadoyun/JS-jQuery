@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //circle 변수에 new Object()가 저장되면 circle변수는 '객체'가 된다.
+    var circle = new Object();
+    circle.color = "red";
+    circle.diameter = 100;
+    circle.radius = function(){
+        var n = this.diameter/2;
+        return n;
+    }
+    document.write(circle.color + "/" + circle.diameter + "/" + circle.radius() +"<br>")
+    circle.color = "blue";
+    circle.diameter = 200;
+    document.write(circle.color + "/" + circle.diameter + "/" + circle.radius() +"<br>")
+    
+</script>
+<body>
+    
+</body>
+</html>

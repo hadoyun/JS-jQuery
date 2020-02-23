@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var circle = function(c, d){
+            this.color = c;
+            this.diameter = d;
+        }
+
+        circle.prototype.radius = function(n) {
+            var r = n/2;
+            return r;
+        }
+
+        var green_circle = new circle("green", 200);
+        document.write(green_circle.radius(200));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

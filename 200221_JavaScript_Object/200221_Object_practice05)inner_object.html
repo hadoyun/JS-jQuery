@@ -1,0 +1,187 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inner object</title>
+</head>
+    <script>
+        //Wrapper object - new 와 생성자 함수를 굳이 사용하지 않아도 해당 값을 입력하면 객체로 인식하는 객체
+        // var num = new Number(10);
+        // var num = 10;
+    
+        // var str = new string("돼동건ㅋ");
+        // var str = "돼동건ㅋ";
+    
+        // var bool = new Boolean(false);
+        // var bool = false;
+        
+        //Nunber() of property 
+        function printNumber(){
+            document.write(Number.MAX_VALUE + "<br>");
+            document.write(Number.MIN_VALUE + "<br>");
+            document.write(Number.NEGATIVE_INFINITY + "<br>");
+            document.write(Number.POSITIVE_INFINITY + "<br>");
+    
+            var num = 328.576;
+            document.write(num.toFixed() + "<br>");
+            document.write(num.toFixed(2) + "<br>");
+            document.write(num.toString() + "<br>");
+            document.write(num.toString(16) + "<br>");
+            document.write(num.toExponential() + "<br>");
+            document.write(num.toExponential(2) + "<br>");
+            document.write(num.toPrecision() + "<br>");
+            document.write(num.toPrecision(2));
+        }
+
+        function printString(){
+            //string 객체 생성 방법
+            // var str = new String("자바스크립트");
+            // var str = "자바스크립트;
+
+            //String() of property
+            var str = "Java_script";
+            document.write(str.length + "<br>");
+            document.write(str.charAt(0) + "<br>");
+            document.write(str.charCodeAt(0) + "<br>");
+            document.write(String.fromCharCode(51088,48148,53356,47549,53944) + "<br>");
+            document.write(str.toLowerCase() + "<br>");
+            document.write(str.toUpperCase() + "<br>");
+            document.write(str.indexOf("a")+ "<br>");
+            document.write(str.lastIndexOf("a") + "<br>");
+            document.write(str.slice(5,11)+"<br>");
+            document.write(str.substring(5,11) + "<br>");
+            document.write(str.substr(5,6) + "<br>");
+            document.write(str.split("_")[0] + "<br>");
+            document.write(str.split("_")[1] + "<br>");
+            document.write(str.replace("Java_script","jQuery") + "<br>");
+            
+            var str1 = "java";
+            var str2 = "script";
+            document.write(str1.concat(str2) + "<br>");
+            document.write(str.anchor("Javascrpit") + "<br>");
+            document.write(str.bold()+"<br>");
+            document.write(str.link("http://icoxpublish.com")+ "<br>");
+            document.write(str.sub() + "<br>");
+            document.write(str.sub());
+        }
+        
+        function createArrayToUseNewOperator(){
+            var my_array = new Array();
+            my_array[0] = "html";
+            my_array[1] = "css";
+            my_array[2] = "javascrpit";
+            my_array[3] = "jQuery";
+        }
+        // ==
+        // function creatArray()
+        // {
+        //     var my_array = new Array("html","css","javascript","jQuery");
+        // }
+
+        function createArrayToUseliteral(){
+            // var ary = ["html","css","javascript","jQuery"];
+            var my_ary = [];
+            arr[0] = "html";
+            arr[1] = "css";
+            arr[2] = "javascript";
+            arr[3] = "jQuery";
+        }   
+        //배열의 메소드와 속성
+        function printArray(){
+            var ary = ["a", "b", "c", "d", "e"];
+            document.write(ary.length + "<br>");
+            document.write(ary.slice(2) + "<br>");
+            document.write(ary.slice(1,3) + "<br>");
+            document.write(ary.join("!") + "<br>");
+            document.write(ary.splice(1,3, "x","y","z") + "<br>");
+            document.write(ary.pop() + "<br>");
+            document.write(ary.push("f") + "<br>");
+            document.write(ary + "<br>");
+            document.write(ary.shift() + "<br>");
+            document.write(ary + "<br>");
+            document.write(ary.unshift("g") + "<br>");
+            document.write(ary + "<br>");
+            document.write(ary.reverse() + "<br>");
+            document.write(ary + "<br>");
+            var add_ary = ["javascript","jQuery"];
+            var new_ary = ary.concat(add_ary);
+            document.write(new_ary + "<br>");
+            document.write(new_ary.toString() + "<br>");
+            var ary_num = [2, 41, 11];
+            ary_num.sort(function(a,b){
+                return a - b;
+                //return b - a;
+            })
+            document.write(ary_num);
+        }
+        //2차원 배열 사용하기
+        function print2DArray(){
+            var array_2d = new Array();
+            array_2d[0] = ["j","a","v","a"];
+            array_2d[1] = ["s","c","r"];
+            array_2d[2] = ["i","p","t"];
+            document.write(array_2d[0][0] + "<br>");
+            document.write(array_2d[1][1] + "<br>");
+            document.write(array_2d[2][2]);
+        }
+
+        var br =function printbr(){
+            document.write("<br>");
+        }
+
+        
+
+        function printMathMathods(){
+            document.write(Math.PI);
+            br();
+            document.write(Math.E);
+            br();
+            document.write(Math.LN2);
+            br();
+            document.write(Math.LN10);
+            br();
+            document.write(Math.LOG2E);
+            br();
+            document.write(Math.LOG10E);
+            br();
+            document.write(Math.abs(-1));
+            br(); 
+            //20
+            document.write(Math.round(20.44));
+            br();
+            //21
+            document.write(Math.round(20.55));
+            br();
+            //21
+            document.write(Math.ceil(20.11));
+            br();
+            document.write(Math.floor(20.55));
+            br();
+            document.write(Math.random());
+            br();
+            document.write(Math.pow(3,2));
+            br();
+            document.write(Math.max(20,22));
+            br();
+            document.write(Math.min(20,22));
+            br();
+            document.write(Math.cos(1));
+            br();
+            document.write(Math.sin(1));
+            br();
+            document.write(Math.tan(1));
+        }
+
+        //printNumber();
+        //printString();
+        //printArray();
+        //print2DArray();
+
+        printMathMathods();
+    </script>
+<body>
+    
+    
+    
+</body>
+</html>

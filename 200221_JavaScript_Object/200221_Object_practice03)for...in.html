@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for...in</title>
+</head>
+<script>
+    var circle = {
+        color : "red",
+        diameter : 100,
+        radius:function(){
+            var n = this.diameter/2;
+            return n;
+        }
+    }
+    
+    // i is circle of mathods / circle[i] is atitude value
+    for(var i in circle){
+        document.write(i + ":" +circle[i] + "<br>");
+    }
+        
+</script>
+<body>
+    
+</body>
+</html>

@@ -4,12 +4,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        showSubject("javascrpit","jQeury");
+        var str1 = "var num1 = 10";
+        var str2 = "var num2 = 20";
 
-        function showSubject(){
-            document.write(arguments[0] + "<br>" + arguments[1]);
-        }
+        eval(str1);
+        eval(str2);
         
+        document.write(num1 + num2);
     </script>
 </head>
 <body>
