@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+</head>
+<style>
+    div {
+        border: 1px solid blue;
+    }
+</style>
+
+<body>
+    <div id="bt"> 클릭 </div>
+ <script>
+    // var bt = document.getElementById("bt");
+    // bt.onclick = function(){
+    //     alert("click!");
+    // }
+
+    // var bt = document.getElementById("bt");
+    // function view(){
+    //     alert("클릭 했어양!");
+    // }
+    // bt.onclick = view;
+
+    window.onload = function(){
+        var bt = document.getElementById("bt");
+        bt.onclick = function(){
+            alert("click");
+        }
+    }    
+</script>   
+</body>
+</html>

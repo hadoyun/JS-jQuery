@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 객체를 알아보자</title>
+</head>
+<style>
+    div{
+        border: 1px solid pink;
+        cursor: pointer;
+    }
+</style>
+<script>
+    window.onload = function(){
+        //bt, txt 의 아이디 가져오기
+        var bt = document.getElementById("bt");
+        var txt = document.getElementById("txt");
+        //bt가 클릭 되었을때 event를 매개 변수로 하는 아래의 함수 실행
+        bt.onclick = function(event){
+            //이벤트를 발생시킨 객체 반환
+            var str = "target:" + event.target + "\n";
+            //이벤트의 이름 반환
+            str += "type:" + event.type + "\n";
+            //이벤트가 발생한 x 좌표 반환(브라우저 기준)
+            str += "clientX:" + event.clientX + "\n";
+            //이벤트가 발생한 y 좌표 반환(브라우저 기준)
+            str += "clienty:" + event.clienty + "\n";
+            //이벤트가 발생한 x 좌표 반환(스크린 기준)
+            str += "screenX:" + event.screenX + "\n";
+            //이벤트가 발생한 x 좌표 반환(스크린 기준)
+            str += "screenY:" + event.screenY + "\n";
+            //마우스 오른쪽/가운데/왼쪽 버튼 값을 반환
+            str += "mouse:" + event.button + "\n";
+           
+            alert(str);
+        }
+
+        txt.onkeydown = function(event){
+            if(event.altkey){
+                alert("alt키를 누르셨어양!");
+            }
+        }
+    }
+</script>
+<body>
+    <div id = "bt"> 클릭 </div>
+    <input type = "text" id = "txt"/>
+</body>
+</html>
