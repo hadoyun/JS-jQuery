@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cookie in crome</title>
+    <script> 
+
+    window.onload = function(){
+        var idSave = document.frm.idSave;
+        idSave.onclick = function(){
+            setCookie("userid", document.frm.id.value, 10);
+        }
+
+        function setCookie(name, value, expires){
+            var d = new Data();
+            d.setData(d.getData() + expires);
+            var sc = "";
+            sc += name + "=" + encodeURIComponent(value) + ",";
+            sc += "expires" = d.toUTCString();
+            //alert(ac)
+            document.cookie = sc;
+        }
+    }
+
+    function getCookie(name)
+    {
+        alert(document.cookie);
+        var gc = document.cookie.replace("","");
+        gc = gc.split(";");
+        for(var i = 0; i < gc.length; ++i)
+        {
+            if(gc[i].split("=")[0] == name)
+            {
+                return gc[i].split("=");
+            }
+        }
+        return null;
+    }
+    document.frm.id.value = getCookie("userId");
+
+    </script>
+</head>
+<body>
+    <formaction="#" name ="frm">
+        <fieldset>
+            <legend>로그인</legend>
+            <div>
+                <label for = 'id'>아이디</label> <input type ="text" name ="id" id = "id" />
+                <input type ="button" value ="아이디 저장" id = "idSave" />
+                <input type ="button" value ="cookie 삭제" name="del"/>
+                <!-- <input type ="button" value ="쿠키 보여주기" name="cookieOut"/> -->
+            </div>
+        </fieldset>
+    </formaction>
+    <ul id = "ul">
+
+    </ul>
+</body>
+</html>
